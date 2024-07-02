@@ -25,3 +25,7 @@ export const LearnMore = () => {
     />
   );
 };
+
+export const ApplyNowButton = () => {
+  return <RedirectButton label="Apply Now" href="https://interviewlynx.app/" />;
+};

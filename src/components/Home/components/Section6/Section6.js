@@ -1,9 +1,9 @@
 import React from "react";
 
-import { GetStartedButton, LearnMore } from "../RedirectButton";
+import { LearnMore } from "../../../RedirectButton";
 
 import styles from "./Section6.module.css";
-import { Cover } from "../Cover";
+import { Cover } from "../../../Cover";
 
 const TITLE = "Be A Career Coach";
 

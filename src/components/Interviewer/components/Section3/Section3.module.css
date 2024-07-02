@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: rgb(236, 236, 236);
+  gap: 50px;
+}
+
+.title {
+  font-family: "Montserrat", Sans-serif;
+  font-size: 50px;
+  color: rgba(26, 26, 26, 0.75);
+  line-height: 65px;
+}
+
+.description {
+  margin-top: 50px;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 16px;
+  color: rgba(26, 26, 26, 0.75);
+  line-height: 27px;
+}
+
+.smallTitle {
+  color: rgba(26, 26, 26, 0.75);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.content {
+  max-width: 1120px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.list {
+  font-family: "Montserrat", Sans-serif;
+  font-size: 16px;
+  color: rgba(26, 26, 26, 0.75);
+  line-height: 27px;
+}
+
+.listContainer {
+  padding: 0 20px;
+}

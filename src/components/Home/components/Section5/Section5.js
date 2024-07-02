@@ -9,7 +9,7 @@ import {
 
 import styles from "./Section5.module.css";
 import YouTube from "react-youtube";
-import { GetStartedButton } from "../RedirectButton";
+import { GetStartedButton } from "../../../RedirectButton";
 
 const BLOCK_MAP = [
   {

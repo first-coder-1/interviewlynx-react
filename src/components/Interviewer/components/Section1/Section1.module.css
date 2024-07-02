@@ -1,0 +1,46 @@
+.container {
+  height: 480px;
+  padding-top: 50px;
+  background-image: url("https://i0.wp.com/www.interviewlynx.com/wp-content/uploads/2023/01/iStock-1220763542.jpg?fit=2246%2C1498&ssl=1");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  max-width: 1140px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px;
+  position: relative;
+  animation-duration: 2s;
+  animation-name: fadeInDown;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  color: #ffffff;
+  font-family: "Montserrat", Sans-serif;
+
+  z-index: 10;
+}
+
+.text1 {
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 3px 2px 11px #000000;
+  font-size: 64px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.text2 {
+  font-size: 32px;
+  text-shadow: 3px 2px 11px #000000;
+  font-weight: 400;
+  font-style: normal;
+}

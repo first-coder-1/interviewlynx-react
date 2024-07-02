@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.title {
+  font-family: "Montserrat", Sans-serif;
+  font-size: 50px;
+  color: rgba(26, 26, 26, 0.75);
+  line-height: 65px;
+}
+
+.description {
+  margin-top: 50px;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 16px;
+  color: rgba(26, 26, 26, 0.75);
+  line-height: 27px;
+  max-width: 1120px;
+  width: 100%;
+}
