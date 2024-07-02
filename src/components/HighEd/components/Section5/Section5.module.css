@@ -1,0 +1,79 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 128px;
+  background-color: rgb(236, 236, 236);
+  gap: 50px;
+}
+
+.innerContainer {
+  max-width: 1140px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-family: "Montserrat", Sans-serif;
+  font-size: 30px;
+  color: rgba(26, 26, 26, 0.75);
+  line-height: 65px;
+}
+
+.subContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+  background-color: white;
+  padding: 30px 20px;
+}
+
+.blockContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-bottom: 16px;
+}
+
+.label {
+  margin-bottom: 8px;
+}
+
+.input {
+  height: 51px;
+  background-color: rgb(247, 250, 252);
+  padding: 0px 20px;
+  border: none;
+}
+
+.input:focus-visible {
+  outline: none;
+}
+
+.button {
+  background-color: rgb(42, 49, 53);
+  color: white;
+  height: 48px;
+  width: 84px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+}

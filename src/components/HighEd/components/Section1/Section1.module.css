@@ -1,0 +1,19 @@
+.container {
+  padding: 160px 40px 80px;
+  background-color: rgb(27, 31, 41);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  max-width: 1140px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  color: #ffffff;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 30px;
+}
