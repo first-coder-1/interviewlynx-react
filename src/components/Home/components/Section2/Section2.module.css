@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  justify-content: center;
+  padding-top: 12px;
+}
+
+.label {
+  font-family: "Montserrat", Sans-serif;
+  font-size: 30px;
+  color: rgba(26, 26, 26, 0.75);
+}

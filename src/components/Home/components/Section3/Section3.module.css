@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.block {
+  font-family: "Montserrat", Sans-serif;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.title {
+  font-size: 24px;
+  color: rgb(42, 60, 187);
+}
+
+.description {
+  width: 100%;
+  text-wrap: wrap;
+  color: rgba(26, 26, 26, 0.75);
+  font-size: 16px;
+  line-height: 28px;
+}
