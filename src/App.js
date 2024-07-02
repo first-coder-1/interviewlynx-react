@@ -2,8 +2,6 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 
 import { Home, Navbar, Footer, Interviewer } from "./components";
-import Services from "./components/Services";
-import Contact from "./components/Contact";
 
 import "./App.css";
 
@@ -14,8 +12,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/interviewer" element={<Interviewer />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </div>
