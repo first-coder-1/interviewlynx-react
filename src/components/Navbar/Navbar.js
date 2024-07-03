@@ -10,19 +10,17 @@ export function Navbar() {
         <span>
           <a
             href="https://www.interviewlynx.com/"
-            class="custom-logo-link transparent-custom-logo"
             rel="home"
-            itemprop="url"
+            itemProp="url"
             aria-label="InterviewLynx"
           >
             <img
               width="200"
               height="28"
               src="https://www.interviewlynx.com/wp-content/uploads/2022/09/cropped-Asset-2@2x-8-200x28.png"
-              class="custom-logo"
               alt=""
               decoding="async"
-              srcset="https://i0.wp.com/www.interviewlynx.com/wp-content/uploads/2022/09/cropped-Asset-2@2x-8.png?resize=200%2C28&amp;ssl=1 200w, https://i0.wp.com/www.interviewlynx.com/wp-content/uploads/2022/09/cropped-Asset-2@2x-8.png?resize=300%2C41&amp;ssl=1 300w, https://i0.wp.com/www.interviewlynx.com/wp-content/uploads/2022/09/cropped-Asset-2@2x-8.png?resize=1024%2C142&amp;ssl=1 1024w, https://i0.wp.com/www.interviewlynx.com/wp-content/uploads/2022/09/cropped-Asset-2@2x-8.png?resize=768%2C106&amp;ssl=1 768w, https://i0.wp.com/www.interviewlynx.com/wp-content/uploads/2022/09/cropped-Asset-2@2x-8.png?w=1041&amp;ssl=1 1041w"
+              srcSet="https://i0.wp.com/www.interviewlynx.com/wp-content/uploads/2022/09/cropped-Asset-2@2x-8.png?resize=200%2C28&amp;ssl=1 200w, https://i0.wp.com/www.interviewlynx.com/wp-content/uploads/2022/09/cropped-Asset-2@2x-8.png?resize=300%2C41&amp;ssl=1 300w, https://i0.wp.com/www.interviewlynx.com/wp-content/uploads/2022/09/cropped-Asset-2@2x-8.png?resize=1024%2C142&amp;ssl=1 1024w, https://i0.wp.com/www.interviewlynx.com/wp-content/uploads/2022/09/cropped-Asset-2@2x-8.png?resize=768%2C106&amp;ssl=1 768w, https://i0.wp.com/www.interviewlynx.com/wp-content/uploads/2022/09/cropped-Asset-2@2x-8.png?w=1041&amp;ssl=1 1041w"
               sizes="(max-width: 200px) 100vw, 200px"
             />
           </a>

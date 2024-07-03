@@ -1,5 +1,5 @@
 import React, { useCallback } from "react";
-
+import { sendEmail } from "../../../../apis";
 import styles from "./Section5.module.css";
 
 const LIST = [
@@ -42,30 +42,42 @@ const LIST = [
   },
 ];
 
-const Block = ({ label, placeholder, value, setValue, isRequired }) => (
-  <div className={styles.blockContainer}>
-    <label className={styles.label}>
-      {label}
-      {isRequired && "*"}
-    </label>
-    <input
-      className={styles.input}
-      type="text"
-      placeholder={placeholder}
-      data-required={isRequired}
-      value={value}
-      onChange={(e) => setValue(e.target.value)}
-    />
-  </div>
-);
+const Block = ({ label, placeholder, value, setValue, isRequired }) => {
+  return (
+    <div className={styles.blockContainer}>
+      <label className={styles.label}>
+        {label}
+        {isRequired && "*"}
+      </label>
+      <input
+        className={styles.input}
+        type="text"
+        placeholder={placeholder}
+        data-required={isRequired}
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+      />
+    </div>
+  );
+};
 
 export const Section5 = () => {
   const [data, setData] = React.useState({});
-
   const setValue = useCallback(
-    (key) => (value) => setData((preData) => ({ ...preData, [key]: value })),
+    (key) => (value) => {
+      setData((preData) => ({ ...preData, [key]: value }));
+    },
     []
   );
+
+  const handleSubmit = () => {
+    const text = LIST.map(
+      (item) => data[item.key] && `${item.label}: ${data[item.key]}`
+    )
+      .filter(Boolean)
+      .join("\n");
+    sendEmail(text);
+  };
 
   return (
     <div className={styles.container}>
@@ -84,13 +96,13 @@ export const Section5 = () => {
           <div className={styles.content}>
             {LIST.map((item) => (
               <Block
-                key={item.key}
                 {...item}
+                key={item.key}
                 value={data[item.key]}
-                setValue={setValue}
+                setValue={setValue(item.key)}
               />
             ))}
-            <button className={styles.button} onClick={() => console.log(data)}>
+            <button className={styles.button} onClick={handleSubmit}>
               Submit
             </button>
           </div>

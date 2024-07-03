@@ -84,13 +84,11 @@ export const Footer = () => {
           <div>
             <a
               href="https://www.interviewlynx.com/"
-              class="custom-logo-link transparent-custom-logo"
               rel="home"
-              itemprop="url"
+              itemProp="url"
               aria-label="InterviewLynx"
             >
               <img
-                class="alignnone  wp-image-1877"
                 src="https://www.interviewlynx.com/wp-content/uploads/2022/09/Asset-1@2x-8-300x41.png"
                 alt=""
                 width="157"
@@ -118,7 +116,9 @@ export const Footer = () => {
         <div className={styles.innerContainer2}>
           <div className={styles.socialContainer}>
             {SOCIAL_LIST.map(({ icon, link }) => (
-              <a href={link}>{icon}</a>
+              <a key={link} href={link}>
+                {icon}
+              </a>
             ))}
           </div>
           <div className={styles.copyright}>

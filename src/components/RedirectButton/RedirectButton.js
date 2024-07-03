@@ -8,7 +8,7 @@ export const RedirectButton = ({ label, href }) => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <span class={styles.buttonLabel}>{label}</span>
+      <span className={styles.buttonLabel}>{label}</span>
     </a>
   );
 };
