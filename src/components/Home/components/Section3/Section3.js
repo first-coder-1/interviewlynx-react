@@ -38,7 +38,7 @@ export const Section3 = () => {
   return (
     <div className={styles.container}>
       {BLOCK_MAP.map((block) => (
-        <Block {...block} />
+        <Block {...block} key={block.title} />
       ))}
     </div>
   );

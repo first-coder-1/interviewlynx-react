@@ -59,8 +59,8 @@ export const Section4 = () => {
           <div className={styles.blockContainer}>
             {LIST.map((item) => (
               <Block
-                key={item.title}
                 {...item}
+                key={item.title}
                 isOpen={openedTitle === item.title}
                 setOpenedTitle={setOpenedTitle}
               />

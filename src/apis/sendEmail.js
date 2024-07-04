@@ -1,9 +1,9 @@
 export const sendEmail = async (
   text = "text",
   subject = "subject",
-  to = process.env.ADMIN_EMAIL
+  to = process.env.REACT_APP_ADMIN_EMAIL
 ) => {
-  const apiKey = process.env.SENDGRID_API_KEY;
+  const apiKey = process.env.REACT_APP_SENDGRID_API_KEY;
   const url = "https://api.sendgrid.com/v3/mail/send";
 
   const data = {

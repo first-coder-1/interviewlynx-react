@@ -34,7 +34,9 @@ export const Section6 = () => {
         <div className={styles.subContainer}>
           <div className={styles.title}>{TITLE}</div>
           {DESCRIPTION_LIST.map((description) => (
-            <div className={styles.description}>{description}</div>
+            <div className={styles.description} key={description}>
+              {description}
+            </div>
           ))}
           <LearnMore />
         </div>
