@@ -5,6 +5,7 @@
 }
 
 .block {
+  padding: 10px;
   font-family: "Montserrat", Sans-serif;
   width: 250px;
   display: flex;
@@ -24,4 +25,13 @@
   color: rgba(26, 26, 26, 0.75);
   font-size: 16px;
   line-height: 28px;
+}
+
+@media (max-width: 767px) {
+  .container {
+    flex-wrap: wrap;
+  }
+  .block {
+    width: 100%;
+  }
 }
