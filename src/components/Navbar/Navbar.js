@@ -1,19 +1,48 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useRoutes } from "react-router-dom";
 
 import styles from "./Navbar.module.css";
+import classNames from "classnames";
 
+const MENU_MAP = [
+  { label: "Home", link: "/" },
+  { label: "Be a Career Coach", link: "/interviewer" },
+  { label: "Higher Ed", link: "/higher-ed" },
+  { label: "Blog", link: "/blog" },
+];
+
+const MenuContent = () => {
+  const [path, setPath] = useState(window.location.pathname);
+  console.log(path);
+  return (
+    <>
+      {MENU_MAP.map(({ label, link }) => (
+        <Link
+          className={classNames(
+            styles.tab,
+            path === link && styles.selectedTab
+          )}
+          to={link}
+          onClick={() => setPath(link)}
+        >
+          {label}
+        </Link>
+      ))}
+    </>
+  );
+};
 export function Navbar() {
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
+
+  const handleClick = () => {
+    setIsOpenMenu(!isOpenMenu);
+  };
+
   return (
     <div className={styles.container}>
       <div>
         <span>
-          <a
-            href="https://www.interviewlynx.com/"
-            rel="home"
-            itemProp="url"
-            aria-label="InterviewLynx"
-          >
+          <a href="/" rel="home" itemProp="url" aria-label="InterviewLynx">
             <img
               width="200"
               height="28"
@@ -40,6 +69,38 @@ export function Navbar() {
           Blog
         </Link>
       </div>
+      <button className={styles.button} onClick={handleClick}>
+        {isOpenMenu ? (
+          <svg
+            class="ast-mobile-svg ast-close-svg"
+            fill="white"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path d="M5.293 6.707l5.293 5.293-5.293 5.293c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0l5.293-5.293 5.293 5.293c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414l-5.293-5.293 5.293-5.293c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0l-5.293 5.293-5.293-5.293c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414z"></path>
+          </svg>
+        ) : (
+          <svg
+            class="ast-mobile-svg ast-menu2-svg"
+            fill="white"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 24 28"
+          >
+            <path d="M24 21v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1zM24 13v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1zM24 5v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1z"></path>
+          </svg>
+        )}
+      </button>
+      {isOpenMenu && (
+        <div className={styles.menuContainer}>
+          <MenuContent />
+        </div>
+      )}
     </div>
   );
 }

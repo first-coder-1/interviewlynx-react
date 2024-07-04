@@ -23,13 +23,12 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  z-index: 10;
+  z-index: 2;
 }
 
 .title {
   font-size: 45px;
   text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-  line-height: 54px;
 }
 
 .description {
@@ -42,15 +41,29 @@
   max-width: 100%;
   height: auto;
   position: relative;
-  z-index: 10;
+  z-index: 2;
 }
 
 @media (max-width: 1024px) {
+  .container {
+    padding: 50px 0;
+  }
   .internalContainer {
     grid-template-columns: none;
     grid-template-rows: max-content max-content;
     gap: 36px;
-    width: calc(100% - 72px);
-    padding: 0 36px;
+    width: calc(100% - 50px);
+  }
+  .subContainer {
+    padding: 0;
+  }
+  .title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .internalContainer {
+    width: calc(100% - 40px);
   }
 }

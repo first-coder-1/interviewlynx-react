@@ -60,10 +60,7 @@ export const Section5 = () => {
         <GetStartedButton />
       </div>
       <div className={styles.videoContainer}>
-        <YouTube
-          videoId="tym4GOSE2-g"
-          opts={{ width: "100%", aspectRatio: 16 / 9 }}
-        />
+        <YouTube videoId="tym4GOSE2-g" opts={{ width: "100%" }} />
       </div>
     </div>
   );
