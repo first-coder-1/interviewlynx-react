@@ -44,3 +44,19 @@
   font-weight: 400;
   font-style: normal;
 }
+
+@media (max-width: 767px) {
+  .text1 {
+    font-size: 37px;
+    letter-spacing: 0px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    height: 332px;
+  }
+  .text2 {
+    font-size: 14px;
+  }
+}

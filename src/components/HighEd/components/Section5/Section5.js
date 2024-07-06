@@ -62,7 +62,6 @@ const Block = ({ label, placeholder, value, setValue, isRequired }) => {
 };
 
 export const Section5 = () => {
-  console.log("Section5", process.env.REACT_APP_SENDGRID_API_KEY);
   const [data, setData] = React.useState({});
   const setValue = useCallback(
     (key) => (value) => {

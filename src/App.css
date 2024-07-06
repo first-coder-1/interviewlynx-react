@@ -21,3 +21,47 @@
   overflow-x: hidden;
   font-family: "Montserrat", Sans-serif;
 }
+
+.h1 {
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 3px 2px 11px #000000;
+  font-size: 64px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.p {
+  font-size: 32px;
+  text-shadow: 3px 2px 11px #000000;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.h2 {
+  color: #3a3a3a;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 50px;
+}
+
+@media (max-width: 921px) {
+  .h1 {
+    font-size: 30px;
+  }
+  .p {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .h1 {
+    font-size: 35px;
+  }
+  .p {
+    font-size: 20px;
+    text-align: center;
+  }
+  .h2 {
+    font-size: 30px;
+  }
+}

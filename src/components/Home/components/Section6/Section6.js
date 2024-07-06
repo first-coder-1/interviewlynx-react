@@ -1,9 +1,9 @@
 import React from "react";
-
+import classNames from "classnames";
 import { LearnMore } from "../../../RedirectButton";
+import { Cover } from "../../../Cover";
 
 import styles from "./Section6.module.css";
-import { Cover } from "../../../Cover";
 
 const TITLE = "Be A Career Coach";
 
@@ -32,7 +32,7 @@ export const Section6 = () => {
           />
         </div>
         <div className={styles.subContainer}>
-          <div className={styles.title}>{TITLE}</div>
+          <div className={classNames("h2", styles.title)}>{TITLE}</div>
           {DESCRIPTION_LIST.map((description) => (
             <div className={styles.description} key={description}>
               {description}

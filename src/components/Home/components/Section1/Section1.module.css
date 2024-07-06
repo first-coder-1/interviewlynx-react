@@ -49,22 +49,10 @@
   .container {
     height: 480px;
   }
-  .text1 {
-    font-size: 30px;
-  }
-  .text2 {
-    font-size: 25px;
-  }
 }
 
 @media (max-width: 767px) {
   .container {
     height: 400px;
-  }
-  .text1 {
-    font-size: 35px;
-  }
-  .text2 {
-    font-size: 20px;
   }
 }

@@ -23,3 +23,11 @@
   align-items: center;
   gap: 20px;
 }
+
+@media (max-width: 1024px) {
+  .content {
+    width: calc(100% - 20px);
+    padding: 0 10px;
+    text-align: center;
+  }
+}

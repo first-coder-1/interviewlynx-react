@@ -30,9 +30,10 @@
 
 .text {
   margin-bottom: 20px;
-  text-align: center;
-  text-shadow: 3px 2px 11px #000000;
-  font-size: 76px;
-  font-weight: 400;
-  font-style: normal;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    height: 330px;
+  }
 }

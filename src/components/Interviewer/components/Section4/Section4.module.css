@@ -1,6 +1,6 @@
 .container {
-  width: 100%;
-  padding: 100px 0;
+  width: calc(100%-20px);
+  padding: 100px 10px;
   font-family: "Montserrat", Sans-serif;
   position: relative;
   display: flex;
@@ -51,4 +51,14 @@
   width: 324px;
   height: 210px;
   position: relative;
+}
+
+@media (max-width: 767px) {
+  .subContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .blockDescription {
+    text-align: center;
+  }
 }

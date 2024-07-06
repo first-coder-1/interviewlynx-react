@@ -9,7 +9,7 @@
 }
 
 .innerContainer {
-  max-width: 1140px;
+  max-width: 1024px;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
@@ -53,8 +53,8 @@
 
 .blockTitle {
   font-family: "Montserrat", Sans-serif;
-  font-size: 36px;
-  color: rgb(26, 26, 26);
+  font-size: 35px;
+  color: rgb(26, 26, 26, 0.75);
   margin-bottom: 8px;
 }
 
@@ -63,4 +63,22 @@
   font-size: 16px;
   color: rgba(26, 26, 26, 0.75);
   line-height: 27px;
+}
+
+@media (max-width: 1024px) {
+  .innerContainer {
+    width: calc(100% - 40px);
+  }
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .blockTitle {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

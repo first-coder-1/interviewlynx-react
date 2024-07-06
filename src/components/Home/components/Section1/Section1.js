@@ -10,8 +10,8 @@ export const Section1 = () => {
     <div className={styles.container}>
       <Cover />
       <div className={styles.content}>
-        <div className={styles.text1}>Ace Your Next Interview</div>
-        <div className={styles.text2}>
+        <div className="h1">Ace Your Next Interview</div>
+        <div className="p">
           Practice Interviewing With Professionals In Your Industry
         </div>
         <GetStartedButton />

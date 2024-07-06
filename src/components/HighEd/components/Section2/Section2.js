@@ -1,4 +1,5 @@
 import React from "react";
+import classNames from "classnames";
 
 import styles from "./Section2.module.css";
 
@@ -7,7 +8,7 @@ export const Section2 = () => {
     <div className={styles.container}>
       <div className={styles.innerContainer}>
         <div className={styles.titleContainer}>
-          <div className={styles.title}>
+          <div className={classNames("h2", styles.title)}>
             Give Your Students A Competitive Edge
           </div>
           <div className={styles.imageContainer}>

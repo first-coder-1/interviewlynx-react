@@ -9,8 +9,8 @@
 }
 
 .innerContainer {
-  max-width: 1140px;
-  width: 100%;
+  max-width: 1024px;
+  width: calc(100% - 40px);
   margin-right: auto;
   margin-left: auto;
   padding: 10px;
@@ -76,4 +76,16 @@
   margin-left: auto;
   margin-right: auto;
   font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .subContainer {
+    grid-template-columns: 1fr;
+  }
 }

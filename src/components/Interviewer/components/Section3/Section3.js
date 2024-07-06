@@ -2,6 +2,7 @@ import React from "react";
 
 import styles from "./Section3.module.css";
 import { ApplyNowButton } from "../../../RedirectButton";
+import classNames from "classnames";
 
 const Block = ({ title, description }) => {
   return (
@@ -15,7 +16,9 @@ const Block = ({ title, description }) => {
 export const Section3 = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.title}>Why Choose InterviewLynx?</div>
+      <div className={classNames(styles.title, "h2")}>
+        Why Choose InterviewLynx?
+      </div>
       <div className={styles.content}>
         <Block
           title="Specialized Expertise: "

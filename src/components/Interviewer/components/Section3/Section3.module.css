@@ -3,17 +3,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 50px 10px;
   background-color: rgb(236, 236, 236);
   gap: 50px;
 }
 
 .title {
-  font-family: "Montserrat", Sans-serif;
-  font-size: 50px;
-  color: rgba(26, 26, 26, 0.75);
-  line-height: 65px;
+  text-align: center;
 }
 
 .description {
@@ -47,4 +43,10 @@
 
 .listContainer {
   padding: 0 20px;
+}
+
+@media (max-width: 767px) {
+  .content {
+    align-items: center;
+  }
 }
