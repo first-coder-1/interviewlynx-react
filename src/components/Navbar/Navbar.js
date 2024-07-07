@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { Link, useRoutes } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import classNames from "classnames";
 
 import styles from "./Navbar.module.css";
-import classNames from "classnames";
 
 const MENU_MAP = [
   { label: "Home", link: "/" },
@@ -12,18 +12,17 @@ const MENU_MAP = [
 ];
 
 const MenuContent = () => {
-  const [path, setPath] = useState(window.location.pathname);
-  console.log(path);
+  const { pathname } = useLocation();
   return (
     <>
       {MENU_MAP.map(({ label, link }) => (
         <Link
+          key={label}
           className={classNames(
             styles.tab,
-            path === link && styles.selectedTab
+            pathname === link && styles.selectedTab
           )}
           to={link}
-          onClick={() => setPath(link)}
         >
           {label}
         </Link>
@@ -31,12 +30,16 @@ const MenuContent = () => {
     </>
   );
 };
+
 export function Navbar() {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
+  const { pathname } = useLocation();
 
   const handleClick = () => {
     setIsOpenMenu(!isOpenMenu);
   };
+
+  useEffect(() => setIsOpenMenu(false), [pathname]);
 
   return (
     <div className={styles.container}>
@@ -72,7 +75,6 @@ export function Navbar() {
       <button className={styles.button} onClick={handleClick}>
         {isOpenMenu ? (
           <svg
-            class="ast-mobile-svg ast-close-svg"
             fill="white"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +86,6 @@ export function Navbar() {
           </svg>
         ) : (
           <svg
-            class="ast-mobile-svg ast-menu2-svg"
             fill="white"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"

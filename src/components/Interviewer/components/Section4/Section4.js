@@ -41,7 +41,7 @@ export const Section4 = () => {
       <div className={styles.internalContainer}>
         <div className={styles.subContainer}>
           {DESCRIPTION_LIST.map(({ image, title, description }) => (
-            <div className={styles.blockContainer}>
+            <div key={title} className={styles.blockContainer}>
               <img
                 fetchpriority="high"
                 decoding="async"
