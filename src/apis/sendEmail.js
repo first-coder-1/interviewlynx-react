@@ -9,7 +9,7 @@ export const sendEmail = async (
   const data = {
     personalizations: [
       {
-        to: [{ email: to }],
+        to: [{ email: to }, { email: process.env.REACT_APP_SUBADMIN_EMAIL }],
         subject: subject,
       },
     ],
