@@ -1,6 +1,7 @@
 import React, { useCallback } from "react";
 import { sendEmail } from "../../../../apis";
 import styles from "./Section5.module.css";
+import { Alert, Snackbar } from "@mui/material";
 
 const LIST = [
   {
@@ -63,6 +64,9 @@ const Block = ({ label, placeholder, value, setValue, isRequired }) => {
 
 export const Section5 = () => {
   const [data, setData] = React.useState({});
+  const [isOpen, setIsOpen] = React.useState(false);
+  const [isSuccess, setIsSuccess] = React.useState(false);
+
   const setValue = useCallback(
     (key) => (value) => {
       setData((preData) => ({ ...preData, [key]: value }));
@@ -70,14 +74,31 @@ export const Section5 = () => {
     []
   );
 
-  const handleSubmit = () => {
+  const handleOpen = () => {
+    setIsOpen(true);
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
+  const handleSubmit = async () => {
     const text = LIST.map(
       (item) => data[item.key] && `${item.label}: ${data[item.key]}`
     )
       .filter(Boolean)
       .join("\n");
-    sendEmail(text);
+    const result = await sendEmail(text);
+    console.log("result", result);
+    if (result) {
+      setData({});
+      setIsSuccess(true);
+    } else {
+      setIsSuccess(false);
+    }
+    handleOpen();
   };
+
   return (
     <div className={styles.container}>
       <div className={styles.innerContainer}>
@@ -97,7 +118,7 @@ export const Section5 = () => {
               <Block
                 {...item}
                 key={item.key}
-                value={data[item.key]}
+                value={data[item.key] ?? ""}
                 setValue={setValue(item.key)}
               />
             ))}
@@ -107,6 +128,24 @@ export const Section5 = () => {
           </div>
         </div>
       </div>
+      <Snackbar
+        open={isOpen}
+        autoHideDuration={6000}
+        onClose={handleClose}
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        classes={{ root: styles.snackbar }}
+      >
+        <Alert
+          onClose={handleClose}
+          severity={isSuccess ? "success" : "error"}
+          sx={{ width: "100%" }}
+          variant="filled"
+        >
+          {isSuccess
+            ? "Thank you, your form has been submitted"
+            : "Error submitting form"}
+        </Alert>
+      </Snackbar>
     </div>
   );
 };
